@@ -1,0 +1,39 @@
+.class_meja {
+	background-color: green;
+	cursor: pointer;
+	color: white;
+	font-size: 20px;
+	font-family: sans-serif;
+	float: left;
+	opacity: 0.8;
+	width: 200px;
+	height: 104px;
+	margin: 5px;
+	border-radius: 10px;
+	text-align: center;
+	padding-top:80px;
+}
+.class_meja:hover{
+	background-color: orange;
+	border-radius: 40px;
+}
+.catatan-meja{
+	background-color: black;
+	float: left;
+	opacity: 0.8;
+	width: 200px;
+	height: 180px;
+	margin: 5px;
+	border-radius: 5px;
+	text-align: center;
+	
+}
+.tulisan-catatan {
+	font-size: 13px;
+	border:none;
+	color: white;
+	text-align: center;
+	background-color: black;
+	padding: 15px;
+	border-radius: 5px;
+}

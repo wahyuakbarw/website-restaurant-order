@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>PESAN</title>
+	<script  src='./js/fungsi-klik-js.js'></script>
+	<link rel="stylesheet" type="text/css" href="css/main-style.css">
+	<link rel="stylesheet" type="text/css" href="css/content-css.css">
+	<link rel="stylesheet" type="text/css" href="css/daftar-css.css">
+	<link rel="stylesheet" type="text/css" href="css/meja-css.css">
+	<link rel="stylesheet" type="text/css" href="css/left-content-css.css">
+	
+</head>
+<body>
+	<div id="frame">
+
+		<div id="header"><img src="images/header_website_TA2.png" alt="header"></div>
+
+		<div id="wrap-menu">
+			<button id="button-menu-daftar" class="button-menu" onclick="" style="display: none;">DAFTAR</button>
+			<button id="button-menu-meja" class="button-menu"  onclick="" >MEJA</button>
+			<button id="button-menu-pesan" class="button-menu" onclick="" style="display: none;">PESAN</button>
+			<!--<button id="button-menu-bayar" class="button-menu" onclick="klikMenuBayar()" >PEMBAYARAN</button> -->
+		</div>
+
+		<div id="left-content">
+			<div class="untuk-label">Nama Pembeli :</div>
+			<div id="nama_pembeli" ></div><br><br>
+			<div class="untuk-label">Nomor Meja :</div>
+			<div id="nomor_meja"></div><br><br><br><br>
+			
+			<div id="tombol-makanan" onclick="klikMenuKiri('tipe_makanan','tipe_minuman')"><b>Makanan</b></div>
+			<div id="tombol-minuman" onclick="klikMenuKiri('tipe_minuman','tipe_makanan')"><b>Minuman</b></div>
+			<div id="tombol-semua" onclick="klikMenuSemua()"><b>All Type</b></div>
+			<div id="tabel-pemesanan"></div>
+			<div>
+				<table width="100%" border="1">
+					<tr>
+						<th width=70%>TOTAL</th>
+						<th width=30% id="total-harga"></th>
+					</tr>
+				</table>
+			</div>
+			<div id="tombol-kirim" onclick="kirimPesanan()"><b>KIRIM PESANAN</b></div>
+			<div id="tombol-bayar" onclick="bayarPesanan()"><b>BAYAR</b></div>
+		</div>
+
+		<div id="content">
+			<div id="tampilan-untuk-daftar" style="display: none;">
+				<div class="kotak">
+					<div class="kotak-login">
+						<div class="logo_restoran_daftar">
+							<img src="images/logo_restoran.png" id="logo_restoran">
+							<input type="text" id="nama-pembeli" class="inputan-untuk-daftar" placeholder="Nama Anda" required/>
+							<input type="text" id="banyak-orang" class="inputan-untuk-daftar" placeholder="Berapa orang yang duduk" required/>
+							<input type="Submit" name="login" value="MASUK" class="tombol_login" onclick="MasukPembeli()">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="tampilan-untuk-meja" >
+				<div class="catatan-meja" >
+					<div class="tulisan-catatan" ><b>SILAHKAN KLIK MEJA YANG DIPILIH<br><br>KETERANGAN :</b></div>
+					<div class="tulisan-catatan" style="background : green;"><b>MEJA SEDANG KOSONG</b></div>
+					<div class="tulisan-catatan" style="background:red;color: yellow;"><b>SEDANG DIGUNAKAN</b></div>
+				</div>
+				<div class="class_meja" id="meja_1" onclick="klikMeja('meja_1')" style="color: white;">MEJA 1</div>
+				<div class="class_meja" id="meja_2" onclick="klikMeja('meja_2')" style="color: white;">MEJA 2</div>
+				<div class="class_meja" id="meja_3" onclick="klikMeja('meja_3')" style="color: white;">MEJA 3</div>
+				<div class="class_meja" id="meja_4" onclick="klikMeja('meja_4')" style="color: white;">MEJA 4</div>
+				<div class="class_meja" id="meja_5" onclick="klikMeja('meja_5')" style="color: white;">MEJA 5</div>
+				<div class="class_meja" id="meja_6" onclick="klikMeja('meja_6')" style="color: white;">MEJA 6</div>
+				<div class="class_meja" id="meja_7" onclick="klikMeja('meja_7')" style="color: white;">MEJA 7</div>
+				<div class="class_meja" id="meja_8" onclick="klikMeja('meja_8')" style="color: white;">MEJA 8</div>
+				<div class="class_meja" id="meja_9" onclick="klikMeja('meja_9')" style="color: white;">MEJA 9</div>
+			</div>
+
+			<div id="tampilan-untuk-pesan">
+				<div id="tipe_makanan">
+					<div id="isi-konten">
+						<img class="gambar-makanan" src="images/stik_daging_dengan_harga.png" alt="Steak Daging">
+						<div id="nama_stik" style="display:none;" >Steak Daging</div>
+						<div id="harga_stik" style="display:none;" >20000</div>
+						<div class="frame-jumlah">
+							<input class="font_jumlah" type="text" placeholder="Masukan jumlah" id="jumlah_stik" style="display:none;" >
+						</div>
+						<div class="frame-pesan">
+							<button id="pilih_stik" class="font_pesan" onclick="klikPilih('jumlah_stik','pilih_stik','pesan_stik')" style="display:block;">Pilih</button>
+							<button id="pesan_stik" class="font_pesan" onclick="klikPesan('jumlah_stik','pilih_stik','pesan_stik','nama_stik','harga_stik')" style="display:none;">Pesan</button>
+						</div>
+					</div>
+					<div id="isi-konten">
+						<img class="gambar-makanan" src="images/capcay_seafood_dengan_harga.png" alt="Capcay Seafood">
+						<div id="nama_capcay" style="display:none;">Capcay Seafood</div>
+						<div id="harga_capcay" style="display:none;" >10000</div>
+						<div class="frame-jumlah">
+							<input class="font_jumlah" type="text" placeholder="Masukan jumlah" id="jumlah_capcay" style="display:none;" >
+						</div>
+						<div class="frame-pesan">
+							<button id="pilih_capcay" class="font_pesan" onclick="klikPilih('jumlah_capcay','pilih_capcay','pesan_capcay')" style="display:block;">Pilih</button>
+							<button id="pesan_capcay" class="font_pesan" onclick="klikPesan('jumlah_capcay','pilih_capcay','pesan_capcay','nama_capcay','harga_capcay')" style="display:none;">Pesan</button>
+						</div>
+					</div>
+					<div id="isi-konten">
+						<img class="gambar-makanan" src="images/kepiting_saus_tiram_dengan_harga.png" alt="Kepiting Saus Tiram">
+						<div id="nama_kepiting" style="display:none;">Kepiting Saus Tiram</div>
+						<div id="harga_kepiting" style="display:none;" >10000</div>
+						<div class="frame-jumlah">
+							<input class="font_jumlah" type="text" placeholder="Masukan jumlah" id="jumlah_kepiting" style="display:none;" >
+						</div>
+						<div class="frame-pesan">
+							<button id="pilih_kepiting" class="font_pesan" onclick="klikPilih('jumlah_kepiting','pilih_kepiting','pesan_kepiting')" style="display:block;">Pilih</button>
+							<button id="pesan_kepiting" class="font_pesan" onclick="klikPesan('jumlah_kepiting','pilih_kepiting','pesan_kepiting','nama_kepiting','harga_kepiting')" style="display:none;">Pesan</button>
+						</div>
+					</div>
+					<div id="isi-konten">
+						<img class="gambar-makanan" src="images/pancake_kacang_merah_dengan_harga.png" alt="Pancake Kacang Merah">
+						<div id="nama_pancake" style="display:none;" >Pancake Kacang Merah</div>
+						<div id="harga_pancake" style="display:none;">10000</div>
+						<div class="frame-jumlah">
+							<input class="font_jumlah" type="text" placeholder="Masukan jumlah" id="jumlah_pancake" style="display:none;" >
+						</div>
+						<div class="frame-pesan">
+							<button id="pilih_pancake" class="font_pesan" onclick="klikPilih('jumlah_pancake','pilih_pancake','pesan_pancake')" style="display:block;">Pilih</button>
+							<button id="pesan_pancake" class="font_pesan" onclick="klikPesan('jumlah_pancake','pilih_pancake','pesan_pancake','nama_pancake','harga_pancake')" style="display:none;">Pesan</button>
+						</div>
+					</div>
+				</div>
+				<div id="tipe_minuman">
+					<div id="isi-konten">
+						<img class="gambar-makanan" src="images/es_soda_buah_dengan_harga.png" alt="Es Soda Buah">
+						<div id="nama_es_buah" style="display:none;" >Es Soda Buah</div>
+						<div id="harga_es_buah" style="display:none;">10000</div>
+						<div class="frame-jumlah">
+							<input class="font_jumlah" type="text" placeholder="Masukan jumlah" id="jumlah_esbuah" style="display:none;" >
+						</div>
+						<div class="frame-pesan">
+							<button id="pilih_esbuah" class="font_pesan" onclick="klikPilih('jumlah_esbuah','pilih_esbuah','pesan_esbuah')" style="display:block;">Pilih</button>
+							<button id="pesan_esbuah" class="font_pesan" onclick="klikPesan('jumlah_esbuah','pilih_esbuah','pesan_esbuah','nama_es_buah','harga_es_buah')" style="display:none;">Pesan</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="tampilan-untuk-pembayaran">
+				
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>

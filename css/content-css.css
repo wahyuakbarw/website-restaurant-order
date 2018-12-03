@@ -1,0 +1,59 @@
+#tampilan-untuk-daftar{
+	background-color: black;
+	opacity: 0.8;
+	width:100%;
+	height: 460px;
+	border-radius: 20px;
+
+}
+
+#tampilan-untuk-meja {
+
+}
+#isi-konten {
+	width: 200px;
+	height: 250px;
+	margin: 5px;
+	float: left;
+	
+}
+
+.gambar-makanan {
+	height: 200px;
+	width: 100%;
+	cursor: pointer;
+	border-radius: 10px;
+}
+/*untuk bawah gambar*/
+.frame-jumlah {
+	height: 40px;
+	float: left;
+}
+.frame-pesan {
+	float: left;
+	height: 40px;
+}
+.font_pesan {
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	border : none;
+	background-color: #4CAF50;
+	margin: 3px;
+	cursor: pointer;
+	padding:10px;
+	border-radius: 5px;
+}
+.font_pesan:hover {
+	background-color:#46a049; 
+}
+.font_jumlah {
+	font-size: 14px;
+	width: 110px;
+	padding:10px 2px 10px 5px;
+	margin: 3px;
+	border-radius: 2px;
+}
+
+#tampilan-untuk-pesan { display: none; }
+

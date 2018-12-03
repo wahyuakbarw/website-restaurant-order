@@ -1,0 +1,58 @@
+
+.kotak-login {
+	max-width: 30%;
+  	padding: 20px;
+  	margin: 0px 0px 0px 32%;
+  	float: left;
+
+}
+.logo_restoran_daftar {
+	background-color: #A87634; 
+  	height: 400px; 
+ 	border-radius: 10px; 
+}
+#logo_restoran {
+	width: 50%; 
+ 	height: 40%; 
+  	margin-left: 25%; 
+ 	margin-top: 5%;
+  	
+}
+.inputan-untuk-daftar{ 
+  height: 10%; 
+  width: 80%; 
+  text-align: center; 
+  color: #141414; 
+  font-size: 17px; 
+  border-radius: 8px; 
+  background-color: rgba(225, 255, 255, 1); 
+  border: 3px solid #0288D1; 
+  margin-left: 10%; 
+  margin-top: 5%; 
+
+} 
+
+.tombol_login { 
+  width: 70%; 
+  height: 10%; 
+  text-align: center; 
+  background-color: #3a2613; 
+  color: white; 
+  font-size: 17px; 
+  border: 2px solid #3a2613; 
+  border-radius: 8px; 
+  margin-top: 5%; 
+  margin-left: 15%;
+  cursor: pointer;
+  float: left;
+} 
+.inputan-untuk-daftar:hover { 
+  border: 3px solid #fff; 
+} 
+
+.tombol_login:hover { 
+  background-color: white; 
+  color: #0288D1; 
+  border: 2px solid white;
+  border-radius: 5px;
+} 
